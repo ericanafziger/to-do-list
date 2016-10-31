@@ -9,9 +9,13 @@
   </head>
   <body>
     <div class="container">
+      <div class="jumbotron">
+        <h1>To Do List</h1>
+        <p>Create a list of tasks to complete</p>
+      </div>
       <div class="row">
         <div class="col-md-6">
-          <h1>To Do List</h1>
+
           <form id="toDoInput">
             <div class="form-group">
               <label for="task">Enter a task that you want to complete:</label>
@@ -21,16 +25,26 @@
               <label for="task">Completion Deadline:</label>
               <input type="text" name="deadline" id="deadline" class="form-control">
             </div>
+            <select class="form-control" id="priority">
+              <option value="low">low</option>
+              <option value="medium">medium</option>
+              <option value="high">high</option>
+            </select>
+            <br>
             <button type="submit" class="btn btn-success">Add Task!</button>
           </form>
         </div><!--end of col 1-->
         <div class="col-md-6">
-          <div class="tasks">
+
             <h2>To Do List:</h2>
-            <div class="form-group">
+            <div id="high">
             </div>
+            <div id="medium">
+            </div>
+            <div id="low">
+            </div>
+            <br>
             <button type="button" class="btn btn-danger">Remove completed items</button>
-          </div>
         </div><!--end of col 2-->
       </div><!--end of row-->
     </div><!--end of container-->
