@@ -15,18 +15,36 @@ $(document).ready(function(){
     var taskInput = $("input#task").val();
     var deadlineInput = $("input#deadline").val();
     var userTasks = new taskObject(taskInput, deadlineInput);
-    $(".tasks .form-group").append("<input type='checkbox' id='checkboxid' name='list' value='"+ taskInput + "'> " + userTasks.taskInput + ", " + userTasks.deadlineInput + "<br>");
+    var testVar = ("<div>" +"<input type='checkbox' id='checkboxid' name='list' value='"+ taskInput + "'> " + userTasks.taskInput + ", " + userTasks.deadlineInput + "<br>" + "</div>")
+    $(".tasks .form-group").append(testVar);
 
-    $(".tasks .form-group").click(function(){
+// prop("checked", true);
+//
+// removeAttr();
 
-      function deleteCheckBox(){
+    $(".tasks button").click(function(){
+      $("input:checkbox[name=list]:checked").each(function(){
 
-        if (document.getElementById('checkboxid').checked){
-           $("#checkboxid").remove();
-        }
-      }
+           $(".tasks input:checkbox[name=list]:checked").parent().remove();
+         });
+
   });
-console.log(document.getElementById('checkboxid').checked);
+
+  // var testVar = ("<input type='checkbox' id='checkboxid' name='list' value='"+ taskInput + "'> " + userTasks.taskInput + ", " + userTasks.deadlineInput + "<br>")
+  // $(".tasks .form-group").append(testVar);
+
+  //
+  // $(".tasks button").click(function deleteIt(){
+  //     $("input:checkbox[name=list]:checked").each(function(){
+  //     var listItem = document.getElementsByValue(taskInput); // get the checkbox
+  //     listItem.remove();
+  //
+  //     }
+  // });
+
+
+
+// console.log(document.getElementById('checkboxid').checked);
 
       // $("input:checkbox[name=list]:checked").each(function(){
       //   var checkedTask = document.getElementsByClassName('chk');
