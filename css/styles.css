@@ -5,3 +5,12 @@
 .tasks, #high, #medium, #low {
   display: none;
 }
+.low {
+  color: #11912f;
+}
+.medium {
+  color: #dda60d;
+}
+.high {
+  color: #a02006;
+}

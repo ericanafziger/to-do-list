@@ -19,7 +19,6 @@ $(document).ready(function(){
 
     var userTasks = new taskObject(taskInput, deadlineInput);
     var testVar = ("<div>" +"<input type='checkbox' id='checkboxid' name='list' value='"+ taskInput + "'> " + userTasks.taskInput + " by " + userTasks.deadlineInput + "<br>" + "</div>")
-    console.log(priorityInput);
     if (priorityInput === "low") {
     $("#low").append(testVar);
     $("#low").show();
