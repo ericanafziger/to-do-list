@@ -32,7 +32,7 @@ $(document).ready(function(){
   }
   // $(".tasks").show();
 
-    $(".tasks button").click(function(){
+    $("button#remove").click(function(){
       $("input:checkbox[name=list]:checked").each(function(){
         $(this).parent().remove();
       });
